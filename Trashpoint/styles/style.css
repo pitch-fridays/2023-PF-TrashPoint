@@ -1,0 +1,407 @@
+:root {
+  --bg-footer: #093e1a;
+  --text-color: #ffffff;
+  --special-color: #d1a40e;
+  --user-bc: #202020;
+}
+
+/* reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* utility */
+
+body {
+  background-color: var(--White);
+  font-family: "Catamaran", sans-serif;
+  color: var(--text-color);
+  /* max-width: 100%; */
+  display: grid;
+  min-height: 80vh;
+}
+
+h1,
+h2,
+h4,
+h5,
+h6 {
+  font-family: "Catamaran", serif;
+}
+.dashbordh1{
+  margin-left: 15rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.fa-solid,
+.fa-regular {
+  color: var(--special-color);
+}
+
+/* base */
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12, 1fr));
+  grid-template-rows: repeat(1, 4rem);
+}
+
+/* ? header */
+.header {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  background-color: var(--White);
+  border-bottom: 1px solid var(--bg-footer);
+  position: fixed;
+  background-color: white;
+  width: 100vw;
+  z-index: 10;
+}
+.nav {
+  display: flex;
+  gap: 19rem;
+  padding-block: 1rem;
+}
+h1 {
+  color: var(--bg-footer);
+}
+
+/* ? main */
+.main {
+  grid-column: 1/-1;
+  grid-row: 2/4;
+  display: flex;
+  width: 100%;
+  height: 110vh;
+}
+
+/* ? aside */
+.aside {
+  background-color: var(--user-bc);
+  /* flex-basis: 20%; */
+  flex-shrink: 1;
+  max-height: fit-content;
+}
+h2 {
+  padding-inline: 4rem;
+  padding-top: 2rem;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.user-profile {
+  background-color: var(--text-color);
+  width: 17rem;
+  border-radius: 10px;
+  margin-inline: 2rem;
+  margin-block: 2rem;
+  min-height: 10%;
+}
+
+.aside .fa-user {
+  font-size: 40px;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  color: var(--bg-footer);
+}
+
+h3 {
+  color: rgba(168, 7, 7, 0.842);
+  font-size: 18px;
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+
+.aside p {
+  padding-left: 1rem;
+  color: var(--bg-footer);
+  padding-bottom: 1rem;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 6rem;
+  font-size: 20px;
+}
+
+.link ul li {
+  list-style: none;
+}
+
+.list a {
+  color: var(--text-color);
+  text-decoration: none;
+  justify-content: left;
+}
+
+.list a:hover {
+  color: var(--special-color);
+}
+
+.list {
+  display: flex;
+  gap: 1.5rem;
+  line-height: 3.5rem;
+}
+
+
+.logout {
+  margin-top: 5rem;
+}
+
+/* ? section */
+.section {
+  background-color: var(--White);
+  flex-basis: 80%;
+  flex-shrink: 1;
+  min-height: 100vh;
+  position: relative;
+}
+
+.user-profile-update {
+  width: 700px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  background: rgb(241, 237, 237);
+  padding: 2rem;
+  border-radius: 10px;
+  flex-shrink: 0;
+  box-shadow: 0 0 9px 3px gray;
+ display: none;
+  position: absolute;
+  color: black;
+}
+
+.profile-input-box input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  font-size: larger;
+  font-weight: 500;
+}
+
+.save-profile {
+  padding: 0.5rem;
+  border-radius: 10px;
+  font-size: larger;
+  font-weight: 500;
+  width: 100%;
+}
+
+.save-profile:hover {
+  background-color:var(--bg-footer);
+} 
+
+.first-section {
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  place-content: center;
+  padding: 3rem;
+  font-family: "Catamaran", sans-serif;
+  font-size: larger;
+  font-weight: 800;
+  display: none;
+}
+
+.pick-up {
+  width: 700px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  background: rgb(241, 237, 237);
+  padding: 2rem;
+  border-radius: 10px;
+  flex-shrink: 0;
+  box-shadow: 0 0 9px 3px grey;
+}
+
+.user-input-box select {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  font-size: larger;
+  font-weight: 500;
+}
+
+.user-input-box input {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  font-size: larger;
+  font-weight: 500;
+}
+
+button {
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: larger;
+  font-weight: 500;
+}
+
+button:hover {
+  background-color: var(--bg-footer);
+  color: var(--text-color);
+}
+
+.second-section {
+  font-family: "Catamaran", sans-serif;
+  position: absolute;
+  color: var(--user-bc);
+  display: none;
+  display: none;
+  width: 48vw;
+  background: rgb(241, 237, 237);
+  box-shadow: 0 0 9px 3px grey;
+}
+
+.box {
+  display: flex;
+  border: 2px solid silver;
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+  margin-left: 0.8rem;
+  margin-top: 0.8rem;
+  width: 39rem;
+}
+
+.bold {
+  font-weight: bolder;
+  margin-bottom: -0.7rem;
+  font-size: 1.2rem;
+}
+
+.it {
+  font-size: 2.5rem;
+  margin-top: 0.5rem;
+}
+
+.inner-box {
+  margin-left: 2rem;
+}
+
+.p {
+  line-height: 1rem;
+  padding: 0.1rem;
+  font-size: 1rem;
+}
+
+/*? attribution */
+.attribution {
+  font-size: 18px;
+  text-align: center;
+  margin: 0 auto;
+  color: var(--White);
+  grid-column: 4/9;
+  margin-top: 5rem;
+}
+
+.attribution a {
+  color: var(--special-color);
+}
+.section3{
+  color: black;
+  position: relative;
+  top: 3rem;
+  max-height: fit-content;
+}
+
+.statsh3{
+  color: black;
+}
+
+#chartContainer {
+  width: 60vw; /* 20% of viewport width */
+  height: 50vh;
+  margin: 0 auto;
+  background-color: rgb(241, 237, 237);
+  box-shadow: 0 0 9px 3px grey;
+  border-radius: 0.5rem;
+  margin-right: 3rem;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+}
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+ justify-content: center;
+padding-bottom: 1rem;
+gap: 1.3rem;
+}
+
+.stat-card {
+  background-color: rgb(241, 237, 237);
+  border-radius: 1rem;
+  padding: 1em;
+  margin: 0.5em;
+  text-align: center;
+  box-shadow: 0 0 9px 3px grey; 
+  margin-bottom: 4rem;  
+}
+#fg{
+  font-size: 2rem;
+}
+.num-dash{
+font-weight: bolder;
+}
+
+.transaction{
+  max-height: 8rem;
+  overflow-y: scroll;
+ width:60vw ;
+ margin-inline: auto;
+ margin-top: 2rem;
+}
+
+.history{
+  border: 2px solid silver;
+  margin-top: 0.2rem;
+  border-radius: 0.3rem;
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 2rem;
+}
+
+.transactionh3{
+ text-align: center;
+ color: black;
+}
+
+.section4{
+  display: none;
+  margin-right: 30rem;
+}
+
+.paystack{
+  width: 250%;
+ /* margin-left: 30rem; */
+ margin-top: 10rem;
+ padding-bottom: 2rem;
+}
+.pay-paystack{
+  text-decoration: none;
+  background-color:rgb(3, 3, 105) ;
+  color: white;
+  padding: 1.2rem;
+  border-radius: 0.2rem;
+ display: flex;
+ justify-content: center;
+ width: 15rem;
+ align-items: center;
+ margin-inline: auto;
+ font-size: 1.3rem;
+}
